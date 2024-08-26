@@ -37,7 +37,8 @@ namespace FamilyEditor
                 doc.SaveAs(templPath);
 
                 // Приостановка на 2 секунды (2000 миллисекунд)
-                Thread.Sleep(2000);
+                Thread.Sleep(2000); 
+
 
                 //удаляю исходный файл.
                 File.Delete(originalPath);
@@ -52,7 +53,7 @@ namespace FamilyEditor
             }
             else
             {
-                TaskDialog.Show("Ошибка", "Пересохранить можно только семейство\nКоманда не выполнена" +
+                TaskDialog.Show("Ошибка", "Пересохранить можно только семейство или шаблон проекта\nКоманда не выполнена" +
                     "\nPlease run this command in a family document");
                 result = Result.Failed;
             }
